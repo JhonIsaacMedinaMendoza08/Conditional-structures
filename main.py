@@ -1,9 +1,12 @@
-#Programa para ordenar dos números:
+#Programa para ordenar tres números:
+
+print("Exercise 5 sort numbers")
 
 number1 = int(input("insert number: "))
 number2 = int(input("insert number: "))
+number3 = int(input("insert number: "))
 
-if number1 > number2:
-    print(number2, number1)
-else:
-    print(number1, number2)
+numbers = [number1 ,number2, number3]
+numbers.sort()
+
+print(numbers)
