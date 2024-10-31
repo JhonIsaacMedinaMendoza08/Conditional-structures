@@ -1,19 +1,17 @@
-from time import localtime
+print ("Exercise 9 TENNIS SET")
 
-print ("Exercise 8 AGE")
+p1 = int(input("games won by A: "))
+p2 = int(input("games won by B: "))
 
-day = int(input("Please, enter your day of birth: "))
-month = int(input("Please, enter your nonth of birth: "))
-year = int(input("Please, enter your year of birth: "))
+#Conocer si es invalido
+if p1 > 7 or p2 > 7 or ( p1==7 and p2 < 5) or (p2==7 and p1 < 5) or abs(p1-p2) > 2:
+    print ("Invalid")
+#Conocer si aun no finaliza
+elif (p1 <= 6 and p2 <= 6 ) or (p1==6 and p2==6):
+    print ("It's not over yet")
+#Conocer si gana P1
+elif (p1 == 6 and p2 <= 4) or (p1 == 7 and p2 == 5) or (p1 == 7 and p2 == 6):
+    print ("Won A")
 
-t = localtime()
-actual_day = t.tm_mday
-actual_month = t.tm_mon
-actual_year = t.tm_year
-
-age = actual_year - year
-
-if (actual_month < month) or (actual_month == month and actual_day < day):
-    age -=1 
-
-print (f"you have {age} years old")
+elif (p2 == 6 and p1 <= 4) or (p2 == 7 and p1 == 5) or (p2 == 7 and p1 == 6):
+    print ("Won B")
