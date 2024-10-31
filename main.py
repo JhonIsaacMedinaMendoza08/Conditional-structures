@@ -1,13 +1,14 @@
-#Programa para ordenar cuatro números:
+print ("Exercise 6 letter or number")
 
-print("Exercise 5 sort numbers")
+character = input ("insert a single character: ")
 
-number1 = int(input("insert number: "))
-number2 = int(input("insert number: "))
-number3 = int(input("insert number: "))
-number4 = int(input("insert number: "))
+if character.isdigit():
+    print ("Is a number")
 
-numbers = [number1 ,number2, number3, number4]
-numbers.sort()
-
-print(numbers)
+elif character.isalpha(): 
+    if character.isupper():
+        print ("the letter is capitalized")
+    else:
+        print ("the letter is lowercase")
+else:
+    print ("It is neither a letter nor a number")
