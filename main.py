@@ -1,14 +1,22 @@
-print ("Exercise 6 letter or number")
+print ("Exercise 7 CALCULATOR")
 
-character = input ("insert a single character: ")
+number1 = float(input("Insert number: "))
+symbol = (input("Insert operator (+, -, *, /): "))
+number2 = float(input("Insert number: "))
 
-if character.isdigit():
-    print ("Is a number")
-
-elif character.isalpha(): 
-    if character.isupper():
-        print ("the letter is capitalized")
-    else:
-        print ("the letter is lowercase")
+if symbol == "+":
+    answer1 = number1 + number2
+    print (f"{number1} + {number2} = {answer1}")
+elif symbol == "-":
+    answer2 = number1 - number2
+    print (f"{number1} - {number2} = {answer2}")
+elif symbol == "*":
+    answer3 = number1 * number2
+    print (f"{number1} * {number2} = {answer3}")
+elif symbol == "/":
+    if number2 !=0:
+        answer4 = number1 / number2
+        print (f"{number1} / {number2} = {answer4}")
 else:
-    print ("It is neither a letter nor a number")
+        print ("No valid")
+        
