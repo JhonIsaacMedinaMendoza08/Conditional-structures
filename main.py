@@ -1,22 +1,19 @@
-print ("Exercise 7 CALCULATOR")
+from time import localtime
 
-number1 = float(input("Insert number: "))
-symbol = (input("Insert operator (+, -, *, /): "))
-number2 = float(input("Insert number: "))
+print ("Exercise 8 AGE")
 
-if symbol == "+":
-    answer1 = number1 + number2
-    print (f"{number1} + {number2} = {answer1}")
-elif symbol == "-":
-    answer2 = number1 - number2
-    print (f"{number1} - {number2} = {answer2}")
-elif symbol == "*":
-    answer3 = number1 * number2
-    print (f"{number1} * {number2} = {answer3}")
-elif symbol == "/":
-    if number2 !=0:
-        answer4 = number1 / number2
-        print (f"{number1} / {number2} = {answer4}")
-else:
-        print ("No valid")
-        
+day = int(input("Please, enter your day of birth: "))
+month = int(input("Please, enter your nonth of birth: "))
+year = int(input("Please, enter your year of birth: "))
+
+t = localtime()
+actual_day = t.tm_mday
+actual_month = t.tm_mon
+actual_year = t.tm_year
+
+age = actual_year - year
+
+if (actual_month < month) or (actual_month == month and actual_day < day):
+    age -=1 
+
+print (f"you have {age} years old")
